@@ -24,7 +24,7 @@ function getMenuData () {
     url: "https://json-data.herokuapp.com/restaurant/menu/1",
   });
 };
-console.log(getMenuData());
+// console.log(getMenuData());
 
 //get imgurPhoto API data
 // $.ajaxSetup({

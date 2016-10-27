@@ -3,6 +3,7 @@ import _ from 'lodash';
 
 import { getNewsData, getSpecialData, getMenuData } from "./api";
 import { placeMenu } from "./menu";
+import { renderRes } from "./form";
 
 function placeNews (data) {
   var newsHTML = `
@@ -35,6 +36,26 @@ function placeSpecial (data) {
 };
 getSpecialData().then(placeSpecial);
 
-
-$("#menuBar").click(placeMenu);
+$(".menu").append(placeMenu);
 $(".reservations").append(renderRes);
+
+
+getMenuData().then(function (results) {
+  var parameters = Object.keys(results);
+  console.log(parameters);
+  for (var i=0; i<parameters.length; i++){
+    var app = results[parameters[i]].map(function (appItem) {
+    return `
+    <div class="${parameters[i]}">
+      <div class="item">${appItem.item}</div>
+      <div class="description">${appItem.description}</div>
+      <div class="price">${appItem.price}</div>
+    </div>`;
+
+  });
+  var HTML = `<div class="${parameters[i]}">` + app + "</div>";
+  $(".menu").append(HTML);
+
+}
+  // $(".menu").append(app)
+});
