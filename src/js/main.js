@@ -1,10 +1,11 @@
 import $ from 'jquery';
 import _ from 'lodash';
 
-import { getNewsData, getSpecialData } from "./api";
+import { getNewsData, getSpecialData, getMenuData } from "./api";
 import { placeMenu } from "./menu";
 
 function placeNews (data) {
+
   var newsHTML = `
     Latest News
       <div class="newsTitle">${data.title}</div>
@@ -15,16 +16,23 @@ $(".news").html(newsHTML);
 };
 getNewsData().then(placeNews)
 
-// function placeSpecial (data) {
-//   var specialHMTL = `
-//   Today's Special
-//     <img src="">
-//     <div class="specialName"></div>
-//     <div class="specialPrice"></div>
-//     <div class="speicalPost"></div>
-//   `;
-//   $(".special").html(newsHTML);
-// };
-// getSpecialData().then(placeSpecial)
+
+function placeSpecial (data) {
+    var specialItem = `${data.menu_item_id}`;
+    var specialHMTL = data.filter(function(menuItem){
+      return menuItem.id === specialItem;
+  //   `
+  //   Today's Special
+  //     <img class="specialImg" src="src="./images/7793782462_d500393da4_b.jpg">
+  //     <div class="specialName">${data.title}</div>
+  //     <div class="specialPrice">${data.date_published}</div>
+  //     <div class="speicalPost">${data.post}</div>
+  // `;
+  $(".special").html(placeItem);
+}
+};
+
+getSpecialData().then(findSpecial)
+
 
 $("#menuBar").click(placeMenu);
