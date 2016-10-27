@@ -1,0 +1,34 @@
+@mixin midBoxSize {
+  width: 200px;
+  height: 100px;
+}
+
+.topBar {
+  height: 90px;
+  display: flex;
+  justify-content: space-between;
+	align-items: center;
+
+  #logo {
+  }
+
+  .socialMedia{
+  }
+}
+
+.img {
+  height: 150px;
+}
+
+.midBox {
+
+  .news {
+    @include midBoxSize;
+  }
+  .special {
+    @include midBoxSize;
+  }
+  .map {
+    @include midBoxSize;
+  }
+}
