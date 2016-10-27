@@ -16,23 +16,25 @@ $(".news").html(newsHTML);
 };
 getNewsData().then(placeNews)
 
-
 function placeSpecial (data) {
     var specialItem = `${data.menu_item_id}`;
-    var specialHMTL = data.filter(function(menuItem){
-      return menuItem.id === specialItem;
-  //   `
-  //   Today's Special
-  //     <img class="specialImg" src="src="./images/7793782462_d500393da4_b.jpg">
-  //     <div class="specialName">${data.title}</div>
-  //     <div class="specialPrice">${data.date_published}</div>
-  //     <div class="speicalPost">${data.post}</div>
-  // `;
-  $(".special").html(placeItem);
-}
+    // console.log(specialItem);
+    getMenuData().then(function(menuData){
+      var special = menuData.entrees.filter(function(menuItem){
+        // console.log(menuItem.id);
+        return menuItem.id === Number(specialItem);
+      })
+      // console.log(special);
+    var specialHTML = `
+      Today's Special
+        <div class="specialItem">${special[0].item}</div>
+        <div class="specialPrice">${special[0].price}</div>
+        <div class="specialDescription">${special[0].description}</div>
+      `;
+  $(".special").html(specialHTML);
+  });
 };
-
-getSpecialData().then(findSpecial)
+getSpecialData().then(placeSpecial);
 
 
 $("#menuBar").click(placeMenu);
