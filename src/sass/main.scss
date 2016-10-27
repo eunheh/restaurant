@@ -1,6 +1,6 @@
 @mixin midBoxSize {
-  width: 200px;
-  height: 100px;
+  width: 300px;
+  height: 200px;
 }
 
 .topBar {
@@ -10,20 +10,32 @@
 	align-items: center;
 
   #logo {
+    font-size: 20px;
   }
 
   .socialMedia{
+    font-size: 15px;
+  }
+}
+.imagecontainer {
+  display: flex;
+  justify-content: center;
+
+  .img {
+    height: 150px;
+    filter: grayscale(100%);
   }
 }
 
-.img {
-  height: 150px;
-}
-
 .midBox {
+  display: flex;
+  justify-content: space-between;
+	flex-flow: row wrap;
+  height: 250px;
 
   .news {
     @include midBoxSize;
+    overflow: auto;
   }
   .special {
     @include midBoxSize;
@@ -31,4 +43,9 @@
   .map {
     @include midBoxSize;
   }
+}
+
+.tabBox {
+  display: flex;
+
 }
