@@ -16,7 +16,7 @@ function getSpecialData () {
     url: "https://json-data.herokuapp.com/restaurant/special/1",
   });
 };
-console.log(getSpecialData());
+// console.log(getSpecialData());
 
 //get menu API data
 function getMenuData () {
