@@ -5,7 +5,6 @@ import { getNewsData, getSpecialData, getMenuData } from "./api";
 import { placeMenu } from "./menu";
 
 function placeNews (data) {
-
   var newsHTML = `
     Latest News
       <div class="newsTitle">${data.title}</div>
@@ -38,3 +37,4 @@ getSpecialData().then(placeSpecial);
 
 
 $("#menuBar").click(placeMenu);
+$(".reservations").append(renderRes);
