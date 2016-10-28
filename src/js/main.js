@@ -1,8 +1,8 @@
 import $ from 'jquery';
 import _ from 'lodash';
 
-import { getNewsData, getSpecialData, getMenuData } from "./api";
-import { placeMenu } from "./menu";
+import { getNewsData, getSpecialData, getMenuData, getPhotoData } from "./api";
+import { story } from "./story";
 import { renderRes } from "./form";
 
 function placeNews (data) {
@@ -36,13 +36,11 @@ function placeSpecial (data) {
 };
 getSpecialData().then(placeSpecial);
 
-$(".menu").append(placeMenu);
-$(".reservations").append(renderRes);
-
+$(".ourStory").html(story);
 
 getMenuData().then(function (results) {
   var parameters = Object.keys(results);
-  console.log(parameters);
+  // console.log(parameters);
   for (var i=0; i<parameters.length; i++){
     var app = results[parameters[i]].map(function (appItem) {
     return `
@@ -51,11 +49,21 @@ getMenuData().then(function (results) {
       <div class="description">${appItem.description}</div>
       <div class="price">${appItem.price}</div>
     </div>`;
-
   });
-  var HTML = `<div class="${parameters[i]}">` + app + "</div>";
-  $(".menu").append(HTML);
-
+  var menuHTML = `<div class="${parameters[i]}">` + app + "</div>";
+  $(".menu").append(menuHTML);
 }
-  // $(".menu").append(app)
 });
+
+$(".reservations").append(renderRes);
+
+function placePhoto (photoData) {
+    var photo = photoData.data.images;
+    var link = photo.map(function (obj) {
+      return `
+      <img src="${obj.link}">
+      `;
+  })
+  $(".foodPhoto").append(link);
+};
+getPhotoData().then(placePhoto);

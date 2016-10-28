@@ -26,23 +26,14 @@ function getMenuData () {
 };
 // console.log(getMenuData());
 
-//get imgurPhoto API data
-// $.ajaxSetup({
-//   headers: {
-//     Authorization: `Client-ID ${imgur_TOKEN}`
-//   }
-// });
-//
-// function getPhotoData () {
-//   return $.ajax({
-//     url: `http://api.imgur.com/3/gallery/album/`,
-//     data: {
-//       id:'0lqc1'
-//     }
-//   });
-// };
-// // console.log(getPhotoData());
+// get imgurPhoto API data
+function getPhotoData () {
+  return $.ajax({
+    headers: {
+      Authorization: `Client-ID ${imgur_TOKEN}`},
+    url:`https://api.imgur.com/3/gallery/GC0q0`,
+  });
+};
+console.log(getPhotoData());
 
-
-
-export { getNewsData, getSpecialData, getMenuData };
+export { getNewsData, getSpecialData, getMenuData, getPhotoData };
