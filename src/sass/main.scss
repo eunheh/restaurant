@@ -133,6 +133,7 @@
 .tabBox {
     display: flex;
     justify-content: space-between;
+    padding-top: 20px;
 
     #headerBox{
       width: 842px;
@@ -140,16 +141,17 @@
       padding-left: 223px;
 
       .header {
-        border: 1px solid #969080;
+        border-bottom: 1px solid #D0CFC4;
         height: 40px;
-        width: 125px;
+        width: 150px;
         color: #8A6341;
         flex-direction: row;
-        font-family: 'Roboto Condensed', sans-serif;
+        padding-top: 20px;
+        padding: 10px;
       }
     }
     .header:hover {
-      background: #D0CFC4;
+      border-bottom: 1px solid  #79A489;
     }
     #detailBox {
       padding-left: 223px;
@@ -166,6 +168,19 @@
       max-width: 1000px;
       padding-top: 10px;
     }
+    .storyPic1 {
+      height: 200px;
+      width: 120px;
+      padding-top: 4px;
+      padding-bottom: 4px;
+    }
+    .storyPic2 {
+      height: 120px;
+      width: 200px;
+      padding-top: 4px;
+      padding-bottom: 4px;
+    }
+
 }
 
 aside {
