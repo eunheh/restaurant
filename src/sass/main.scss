@@ -1,6 +1,14 @@
 @mixin midBoxSize {
-  width: 300px;
-  height: 200px;
+  width: 270px;
+  height: 230px;
+  padding: 10px;
+  border: 1px solid #D0CFC4;
+}
+
+*{
+  box-sizing: border-box;
+  background-color: #F6F5EF;
+  font-family: 'Lora', serif;
 }
 
 .topBar {
@@ -8,23 +16,29 @@
   display: flex;
   justify-content: space-between;
 	align-items: center;
+  padding-left: 223px;
+  padding-right: 223px;
 
   #logo {
-    font-size: 20px;
+    font-size: 40px;
+    font-family: 'Monsieur La Doulaise';
+    color: #855F39;
   }
-
   .socialMedia{
-    font-size: 15px;
+    font-size: 13px;
+    color: #855F39;
   }
 }
 
 .imagecontainer {
   display: flex;
   justify-content: center;
+  height: 350px;
+  filter: grayscale(80%);
 
-  .img {
-    height: 150px;
-    filter: grayscale(100%);
+  img {
+    padding: 15px;
+    border: 1px solid #D0CFC4;
   }
 }
 
@@ -32,85 +46,144 @@
   display: flex;
   justify-content: space-between;
 	flex-flow: row wrap;
-  height: 250px;
+  height: 260px;
+  padding-top: 15px;
+  padding-bottom: 10px;
+  padding-left: 223px;
+  padding-right:223px;
+
+  .midHeader {
+    font-family: 'Roboto Condensed', sans-serif;
+    color: #79A489;
+    font-size: 15px;
+  }
+  .title {
+    color: black;
+    font-size: 12px;
+    padding-top: 4px;
+    padding-bottom: 4px;
+  }
+
+  .post {
+    color: black;
+    font-size: 12px;
+    padding-top: 4px;
+    padding-bottom: 4px;
+  }
+
 
   .news {
     @include midBoxSize;
     overflow: hidden;
+    font-size: 12px;
+
+    .title {
+      color: black;
+      font-size: 12px;
+      font-weight: 600;
+      padding-top: 4px;
+
+    }
+    .post {
+      color: black;
+      font-size: 12px;
+    }
   }
+
   .special {
     @include midBoxSize;
+    font-size: 12px;
+
+    .specialPic {
+      height: 120px;
+      width: 250px;
+      padding-top: 4px;
+      padding-bottom: 4px;
+    }
+    .title {
+      color: black;
+      font-size: 12px;
+      font-weight: 600;
+    }
+    .post {
+      color: black;
+      font-size: 12px;
+    }
   }
-  #map {
+  .googleMap {
     @include midBoxSize;
+    font-family: 'Roboto Condensed', sans-serif;
+    color: #79A489;
+    font-size: 15px;
+
+    #map {
+      height: 120px;
+      width: 250px;
+      padding-top: 4px;
+      padding-bottom: 4px;
+    }
+    .address {
+      color: black;
+      font-size: 12px;
+      text-align: center;
+    }
   }
 }
 
 .tabBox {
-    max-width: 900px;
     display: flex;
+    justify-content: space-between;
 
-    .header {
-      background-color: grey;
-      border: 1px solid lightgrey;
-      height: 40px;
-      width: 125px;
-      color: white;
-      padding-left: 20px;
-      padding-top: 22px;
-      flex-direction: row;
+    #headerBox{
+      width: 842px;
+      display: flex;
+      padding-left: 223px;
+
+      .header {
+        border: 1px solid #969080;
+        height: 40px;
+        width: 125px;
+        color: #8A6341;
+        flex-direction: row;
+        font-family: 'Roboto Condensed', sans-serif;
+      }
     }
-
     .header:hover {
-      background: lightgrey;
+      background: #D0CFC4;
+    }
+    #detailBox {
+      padding-left: 223px;
     }
     .detail {
       max-height: 0px;
       max-width: 0px;
-      border: 1px solid lightgrey;
       overflow: hidden;
-      color: grey;
       font-size: 14px;
       flex-direction: column-reverse;
     }
-
     .detailShow {
-      max-height: 500px;
-      max-width: 300px;
-      padding: 10px;
+      max-height: 1300px;
+      max-width: 1000px;
+      padding-top: 10px;
     }
 }
-// .tabBox {
-//     max-width: 900px;
-//     display: flex;
-//
-//     .header {
-//       background-color: grey;
-//       border: 1px solid lightgrey;
-//       height: 40px;
-//       width: 125px;
-//       color: white;
-//       padding-left: 20px;
-//       padding-top: 22px;
-//       flex-direction: row;
-//     }
-//
-//     .header:hover {
-//       background: lightgrey;
-//     }
-//     .detail {
-//       max-height: 0px;
-//       max-width: 0px;
-//       border: 1px solid lightgrey;
-//       overflow: hidden;
-//       color: grey;
-//       font-size: 14px;
-//       flex-direction: column-reverse;
-//     }
-//
-//     .detailShow {
-//       max-height: 500px;
-//       max-width: 300px;
-//       padding: 10px;
-//     }
-// }
+
+aside {
+  margin-right: 100px;
+  font-size: 12px;
+  color: #8A6341;
+
+  img {
+    width: 210px;
+    padding-top: 5px;
+
+  }
+}
+
+
+footer{
+  font-size: 12px;
+  color: #8A6341;
+  margin: 10px auto;
+  padding-left: 223px;
+}
