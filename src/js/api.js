@@ -34,6 +34,6 @@ function getPhotoData () {
     url:`https://api.imgur.com/3/gallery/GC0q0`,
   });
 };
-console.log(getPhotoData());
+// console.log(getPhotoData());
 
 export { getNewsData, getSpecialData, getMenuData, getPhotoData };

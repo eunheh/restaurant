@@ -4,14 +4,14 @@ import _ from 'lodash';
 import { getNewsData, getSpecialData, getMenuData, getPhotoData } from "./api";
 import { story } from "./story";
 import { renderRes } from "./form";
+import { showTab } from "./tabs";
 
 function placeNews (data) {
   var newsHTML = `
-    Latest News
-      <div class="newsTitle">${data.title}</div>
-      <div class="newsDate">${data.date_published}</div>
-      <div class="newsPost">${data.post} Read more...</div>
-    `;
+    <div class="midHeader">Latest News
+      <div class="title">${data.title}         ${data.date_published}</div>
+      <div class="post">${data.post} Read more...</div>
+    </div>`;
 $(".news").html(newsHTML);
 };
 getNewsData().then(placeNews)
@@ -26,11 +26,11 @@ function placeSpecial (data) {
       })
       // console.log(special);
     var specialHTML = `
-      Today's Special
-        <div class="specialItem">${special[0].item}</div>
-        <div class="specialPrice">${special[0].price}</div>
-        <div class="specialDescription">${special[0].description}</div>
-      `;
+      <div class="midHeader">Today's Special
+        <img class="specialPic" src="./images/Seared_Scallops.jpg">
+        <div class="title">${special[0].item} . . . . . . . . . . . . . . .  ${special[0].price}</div>
+        <div class="post">${special[0].description}</div>
+      </div>`;
   $(".special").html(specialHTML);
   });
 };
@@ -67,3 +67,5 @@ function placePhoto (photoData) {
   $(".foodPhoto").append(link);
 };
 getPhotoData().then(placePhoto);
+
+$(".header").click(showTab);

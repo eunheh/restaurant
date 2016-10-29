@@ -5,24 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Restaurant</title>
     <link rel="stylesheet" href="css/normalize.css">
+    <link href="https://fonts.googleapis.com/css?family=Monsieur+La+Doulaise" rel="stylesheet">
+    <link <link href="https://fonts.googleapis.com/css?family=Lora:400i|Roboto+Condensed" rel="stylesheet">
     <link rel="stylesheet" href="css/main.css">
-
   </head>
-  <body>
+<body>
 
   <nav class="topBar">
-
-      <div id="logo">Iron Cooks</div>
-
-      <div class="socialMedia">Connect with Us</div>
-
+    <div id="logo">Iron Cooks</div>
+    <div class="socialMedia">CONNECT WITH US</div>
   </nav>
 
 <!--     IMAGE BOX    -->
   <div class="imagecontainer">
-
-    <img src="./images/7793782462_d500393da4_b.jpg">
-
+    <img src="./images/kimballhouse.jpeg">
   </div>
 
 <!--    MID BOX       -->
@@ -30,26 +26,38 @@
   <div class="midBox">
     <div class="news" id="news"></div>
     <div class="special"></div>
-    <div id="map">
-<!-- <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3317.
-3406333683884!2d-84.39352688481543!3d33.75186254094696!2m3!1f0!2f0!3f0!
-3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88f50383f3ab72e5%3A0xab2ff0008509bc09!
-2sThe+Iron+Yard+-+Atlanta!5e0!3m2!1sen!2sus!4v1477601758777" 
-width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe> -->
+    <div class="googleMap">Our Location
+      <iframe id="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3317.
+      3406333683884!2d-84.39352688481543!3d33.75186254094696!2m3!1f0!2f0!3f0!
+      3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88f50383f3ab72e5%3A0xab2ff0008509bc09!
+      2sThe+Iron+Yard+-+Atlanta!5e0!3m2!1sen!2sus!4v1477601758777"
+      width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+      <p class="address">115 M.L.K. Jr Dr SW #400, Atlanta, GA 30303</p>
+      <p class="address"> (770) 751-8046 • MAP • Directions </p>
     </div>
   </div>
 
 <!--     TAB BOX           -->
 
   <div class="tabBox">
-    <div class="ourStory" id="ourStory"></div>
-    <div class="menu" id="menuBar"></div>
-    <div class="reservations" id="reservationBar"></div>
+    <div id="tabContainer">
+
+      <div id="headerBox">
+        <div class="header" id="header1">OUR STORY</div>
+        <div class="header" id="header2">MENU</div>
+        <div class="header" id="header3">RESERVATIONS</div>
+      </div>
+
+      <div id="detailBox">
+        <div class="tabBox"><div class="ourStory detail detail1"></div></div>
+        <div class="tabBox"><div class="menu detail detail2"></div></div>
+        <div class="tabBox"><div class="reservations detail detail3"></div></div>
+      </div>
+
+    </div>
+
+    <aside class="foodPhoto">PHOTOS OF OUR INGREDIENTS...</aside>
   </div>
-
-<!--    FOOD PHOTO         -->
-
-  <aside class="foodPhoto"></aside>
 
 <!--      FOOTER          -->
   <footer>© 2016 Iron Cooks.</footer>
