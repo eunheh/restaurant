@@ -47,8 +47,8 @@ getMenuData().then(function (results) {
     return `
     <div class="${parameters[i]}">
       <div class="item">${appItem.item}</div>
-      <div class="description">${appItem.description}</div>
       <div class="price">${appItem.price}</div>
+      <div class="description">${appItem.description}</div>
     </div>`;
   });
   var menuHTML = `<div class="${parameters[i]}">` + app + "</div>";

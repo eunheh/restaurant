@@ -8,38 +8,29 @@
 
 	<form>
 
-		Full Name
+		<p class="formTitle">Full Name<p>
+		<p><input type="text" name="Full Name"></p>
 
-			<input type="text" name="Full Name" ca>
+		<p class="formTitle">Number Of Guests</p>
+		<p><input type="number"  name="Number of Guests"></p>
 
-		Number Of Guests
+		<p class="formTitle">Date</p>
+		<p><input type="date" name="Date"></p>
 
-			<input type="number"  name="Number of Guests">
-
-		Date
-
-			<input type="date" name="Date">
-
-		Special Notes
-
-			<textarea class></textarea>
+		<p class="formTitle">Special Notes</p>
+		<p><textarea class></textarea></p>
 
 
 	</form>
 
-		Seating Preference
+		<p class="formTitle">Seating Preference</p>
 
 			<select> name = "Seating Preference
-
 				<option value = "Indoor">Indoor</option>
 				<option value = "Outdoor">Outdoor</option>
-
 			</select>
 
-
-	<input type="button" onclick = "alert('Your Reservation is Confirmed!') 
-
-	value = "Reserve Table">  `
+		<div><button>Make Reservation</button></div>`
 };
 
 
