@@ -4,7 +4,14 @@
   padding: 10px;
   border: 1px solid #D0CFC4;
 }
+@mixin iconFix{
+  width:20px;
+  height:20px;
+  display: flex;
+  margin-left:5px;
+  margin-right:5px;
 
+}
 *{
   box-sizing: border-box;
   background-color: #F6F5EF;
@@ -29,7 +36,21 @@
     color: #855F39;
   }
 }
+.socialMedialinks{
+  @include iconFix;
+  margin-top:3px;
 
+}
+.medlink1{
+  @include iconFix;
+  margin-left:15px;
+}
+.medlink2{
+  @include iconFix;
+}
+.medlink3{
+  @include iconFix;
+}
 .imagecontainer {
   display: flex;
   justify-content: center;
