@@ -36,6 +36,7 @@ function placeSpecial (data) {
 };
 getSpecialData().then(placeSpecial);
 
+$(".header").click(showTab);
 $(".ourStory").html(story);
 
 getMenuData().then(function (results) {
@@ -67,5 +68,3 @@ function placePhoto (photoData) {
   $(".foodPhoto").append(link);
 };
 getPhotoData().then(placePhoto);
-
-$(".header").click(showTab);

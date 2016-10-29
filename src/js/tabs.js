@@ -1,6 +1,7 @@
 import $ from 'jquery';
 import _ from 'lodash';
 
+
 function showTab (event) {
   var target = $(event.target);
   console.log(target[0].id);

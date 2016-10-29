@@ -4,31 +4,31 @@
 
 
 	function renderRes(item){
-	return ` 
-	
+	return `
+
 	<form>
-		
+
 		Full Name
-			
+
 			<input type="text" name="Full Name" ca>
 
 		Number Of Guests
-			
+
 			<input type="number"  name="Number of Guests">
 
 		Date
-			
-			<input type="date" name="Date">	
-		
+
+			<input type="date" name="Date">
+
 		Special Notes
-	
+
 			<textarea class></textarea>
 
-	
+
 	</form>
 
 		Seating Preference
-	
+
 			<select> name = "Seating Preference
 
 				<option value = "Indoor">Indoor</option>
@@ -36,13 +36,11 @@
 
 			</select>
 
-	
-	<input type="button" onclick = "alert( 'Your Reservation is Confirmed!') 
+
+	<input type="button" onclick = "alert('Your Reservation is Confirmed!') 
 
 	value = "Reserve Table">  `
 };
 
 
 export{renderRes};
-
-

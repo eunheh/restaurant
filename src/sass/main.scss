@@ -71,7 +71,6 @@
     padding-bottom: 4px;
   }
 
-
   .news {
     @include midBoxSize;
     overflow: hidden;
@@ -150,9 +149,6 @@
         padding: 10px;
       }
     }
-    .header:hover {
-      border-bottom: 1px solid  #79A489;
-    }
     #detailBox {
       padding-left: 223px;
     }
@@ -165,8 +161,7 @@
     }
     .detailShow {
       max-height: 1300px;
-      max-width: 1000px;
-      padding-top: 10px;
+      max-width: 600px;
     }
     .storyPic1 {
       height: 200px;
