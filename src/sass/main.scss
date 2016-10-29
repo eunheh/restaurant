@@ -84,26 +84,21 @@
     padding-top: 4px;
     padding-bottom: 4px;
   }
-
   .post {
     color: black;
     font-size: 12px;
     padding-top: 4px;
     padding-bottom: 4px;
   }
-
-
   .news {
     @include midBoxSize;
     overflow: hidden;
     font-size: 12px;
-
     .title {
       color: black;
       font-size: 12px;
       font-weight: 600;
       padding-top: 4px;
-
     }
     .post {
       color: black;
@@ -171,9 +166,6 @@
         padding: 10px;
       }
     }
-    .header:hover {
-      border-bottom: 1px solid  #79A489;
-    }
     #detailBox {
       padding-left: 223px;
     }
@@ -184,26 +176,68 @@
       font-size: 14px;
       flex-direction: column-reverse;
     }
+
     .detailShow {
       max-height: 1300px;
-      max-width: 1000px;
-      padding-top: 10px;
-    }
-    .storyPic1 {
-      height: 200px;
-      width: 120px;
-      padding-top: 4px;
-      padding-bottom: 4px;
-    }
-    .storyPic2 {
-      height: 120px;
-      width: 200px;
-      padding-top: 4px;
-      padding-bottom: 4px;
-    }
+      max-width: 600px;
 
+    }
+}
+.storyPic1 {
+  height: 200px;
+  width: 120px;
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+.storyPic2 {
+  height: 120px;
+  width: 200px;
+  padding-top: 4px;
+  padding-bottom: 4px;
 }
 
+.menuType {
+  font-size: 23px;
+  margin-top: 10px;
+  margin-bottom: 25px;
+}
+.menuType:first-letter {
+  text-transform: uppercase;
+}
+
+.item {
+  font-size: 16px;
+  display: flex;
+  justify-content: space-between;
+
+  .price {
+    font-size: 16px;
+  }
+}
+.description {
+  padding-top: 12px;
+  padding-bottom: 5px;
+  font-size: 12px;
+}
+
+
+.reservations {
+  padding-top: 20px;
+  margin-top: -60px;
+
+  .formTitle {
+    padding-top: 20px;
+  }
+
+  button {
+    margin-top: 40px;
+    height: 60px;
+    width: 200px;
+  }
+  button:hover {
+    background-color: #C0D4C7;
+  }
+}
 aside {
   margin-right: 100px;
   font-size: 12px;
@@ -215,7 +249,6 @@ aside {
 
   }
 }
-
 
 footer{
   font-size: 12px;

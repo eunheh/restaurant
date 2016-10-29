@@ -36,6 +36,7 @@ function placeSpecial (data) {
 };
 getSpecialData().then(placeSpecial);
 
+$(".header").click(showTab);
 $(".ourStory").html(story);
 
 getMenuData().then(function (results) {
@@ -45,13 +46,15 @@ getMenuData().then(function (results) {
     var app = results[parameters[i]].map(function (appItem) {
     return `
     <div class="${parameters[i]}">
-      <div class="item">${appItem.item}</div>
+      <div class="item">${appItem.item}
+      <span class="price">${appItem.price}</span></div>
       <div class="description">${appItem.description}</div>
-      <div class="price">${appItem.price}</div>
     </div>`;
   });
-  var menuHTML = `<div class="${parameters[i]}">` + app + "</div>";
-  $(".menu").append(menuHTML);
+  var appHTML = `<div class="menuType">${parameters[i]}
+  <div class="${parameters[i]}"></div>` + app + "</div>";
+
+  $(".menu").append(appHTML);
 }
 });
 
@@ -67,5 +70,3 @@ function placePhoto (photoData) {
   $(".foodPhoto").append(link);
 };
 getPhotoData().then(placePhoto);
-
-$(".header").click(showTab);

@@ -4,45 +4,34 @@
 
 
 	function renderRes(item){
-	return ` 
-	
+	return `
+
 	<form>
-		
-		Full Name
-			
-			<input type="text" name="Full Name" ca>
 
-		Number Of Guests
-			
-			<input type="number"  name="Number of Guests">
+		<p class="formTitle">Full Name<p>
+		<p><input type="text" name="Full Name"></p>
 
-		Date
-			
-			<input type="date" name="Date">	
-		
-		Special Notes
-	
-			<textarea class></textarea>
+		<p class="formTitle">Number Of Guests</p>
+		<p><input type="number"  name="Number of Guests"></p>
 
-	
+		<p class="formTitle">Date</p>
+		<p><input type="date" name="Date"></p>
+
+		<p class="formTitle">Special Notes</p>
+		<p><textarea class></textarea></p>
+
+
 	</form>
 
-		Seating Preference
-	
-			<select> name = "Seating Preference
+		<p class="formTitle">Seating Preference</p>
 
+			<select> name = "Seating Preference
 				<option value = "Indoor">Indoor</option>
 				<option value = "Outdoor">Outdoor</option>
-
 			</select>
 
-	
-	<input type="button" onclick = "alert( 'Your Reservation is Confirmed!') 
-
-	value = "Reserve Table">  `
+		<div><button>Make Reservation</button></div>`
 };
 
 
 export{renderRes};
-
-
