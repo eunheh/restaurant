@@ -41,13 +41,76 @@
   .special {
     @include midBoxSize;
   }
-  .map {
+  #map {
     @include midBoxSize;
   }
 }
 
-
 .tabBox {
-  display: flex;
+    max-width: 900px;
+    display: flex;
 
+    .header {
+      background-color: grey;
+      border: 1px solid lightgrey;
+      height: 40px;
+      width: 125px;
+      color: white;
+      padding-left: 20px;
+      padding-top: 22px;
+      flex-direction: row;
+    }
+
+    .header:hover {
+      background: lightgrey;
+    }
+    .detail {
+      max-height: 0px;
+      max-width: 0px;
+      border: 1px solid lightgrey;
+      overflow: hidden;
+      color: grey;
+      font-size: 14px;
+      flex-direction: column-reverse;
+    }
+
+    .detailShow {
+      max-height: 500px;
+      max-width: 300px;
+      padding: 10px;
+    }
 }
+// .tabBox {
+//     max-width: 900px;
+//     display: flex;
+//
+//     .header {
+//       background-color: grey;
+//       border: 1px solid lightgrey;
+//       height: 40px;
+//       width: 125px;
+//       color: white;
+//       padding-left: 20px;
+//       padding-top: 22px;
+//       flex-direction: row;
+//     }
+//
+//     .header:hover {
+//       background: lightgrey;
+//     }
+//     .detail {
+//       max-height: 0px;
+//       max-width: 0px;
+//       border: 1px solid lightgrey;
+//       overflow: hidden;
+//       color: grey;
+//       font-size: 14px;
+//       flex-direction: column-reverse;
+//     }
+//
+//     .detailShow {
+//       max-height: 500px;
+//       max-width: 300px;
+//       padding: 10px;
+//     }
+// }

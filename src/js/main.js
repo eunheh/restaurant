@@ -4,6 +4,7 @@ import _ from 'lodash';
 import { getNewsData, getSpecialData, getMenuData, getPhotoData } from "./api";
 import { story } from "./story";
 import { renderRes } from "./form";
+import { showTab } from "./tabs";
 
 function placeNews (data) {
   var newsHTML = `
@@ -67,3 +68,5 @@ function placePhoto (photoData) {
   $(".foodPhoto").append(link);
 };
 getPhotoData().then(placePhoto);
+
+$(".header").click(showTab);

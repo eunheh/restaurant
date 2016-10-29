@@ -30,21 +30,27 @@
   <div class="midBox">
     <div class="news" id="news"></div>
     <div class="special"></div>
-    <div id="map">
-<!-- <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3317.
+    <div>
+<iframe id="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3317.
 3406333683884!2d-84.39352688481543!3d33.75186254094696!2m3!1f0!2f0!3f0!
 3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88f50383f3ab72e5%3A0xab2ff0008509bc09!
-2sThe+Iron+Yard+-+Atlanta!5e0!3m2!1sen!2sus!4v1477601758777" 
-width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe> -->
-    </div>
+2sThe+Iron+Yard+-+Atlanta!5e0!3m2!1sen!2sus!4v1477601758777"
+width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+  </div>
   </div>
 
 <!--     TAB BOX           -->
 
   <div class="tabBox">
-    <div class="ourStory" id="ourStory"></div>
-    <div class="menu" id="menuBar"></div>
-    <div class="reservations" id="reservationBar"></div>
+    <div id="tabContainer">
+      <div class="header" id="header1">OurStory</div>
+      <div class="header" id="header3">Reservations</div>
+      <div class="header" id="header2">Menu</div>
+
+      <div class="tabBox"><div class="ourStory detail detail1"></div></div>
+      <div class="tabBox"><div class="menu detail detail2"></div></div>
+      <div class="tabBox"><div class="reservations detail detail3"></div></div>
+    </div>
   </div>
 
 <!--    FOOD PHOTO         -->
@@ -57,3 +63,19 @@ width="600" height="450" frameborder="0" style="border:0" allowfullscreen></ifra
     <script src="js/bundle.js"></script>
   </body>
 </html>
+<!-- <div class="tabBox">
+  <div id="tabContainer">
+    <div class="header" id="header1">OurStory</div>
+    <div class="tabBox"><div class="ourStory detail detail1"></div></div>
+  </div>
+
+  <div id="tabContainer">
+    <div class="header" id="header2">Menu</div>
+    <div class="tabBox"><div class="menu detail detail2"></div></div>
+  </div>
+
+  <div id="tabContainer">
+    <div class="header" id="header3">Reservations</div>
+    <div class="tabBox"><div class="reservations detail detail3"></div></div>
+  </div>
+</div> -->
