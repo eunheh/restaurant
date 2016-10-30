@@ -32,7 +32,6 @@ function getPhotoData () {
     headers: {
       Authorization: `Client-ID ${imgur_TOKEN}`},
     url:`https://api.imgur.com/3/gallery/GC0q0`,
-    perPage: 5,
   });
 };
 // console.log(getPhotoData());

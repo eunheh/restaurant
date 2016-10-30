@@ -98,6 +98,7 @@
     @include midBoxSize;
     overflow: hidden;
     font-size: 12px;
+    display: flex;
     .title {
       color: black;
       font-size: 12px;
@@ -107,6 +108,11 @@
     .post {
       color: black;
       font-size: 12px;
+      line-height: 15px;
+      overflow:scroll;
+      display: -webkit-box;
+      -webkit-line-clamp: 11;
+      -webkit-box-orient: vertical;
     }
   }
 
@@ -185,7 +191,7 @@
       flex-direction: column-reverse;
     }
     .detailShow {
-      max-height: 1300px;
+      max-height: 1500px;
       max-width: 575px;
     }
 }
@@ -223,6 +229,7 @@
   display: flex;
   justify-content: space-between;
   color: black;
+  padding-top: 10px;
 
   .price {
     font-size: 16px;
@@ -230,12 +237,34 @@
   }
 }
 .description {
+  display: flex;
+  justify-content: space-between;
   padding-top: 12px;
-  padding-bottom: 5px;
+  padding-bottom: 16px;
   font-size: 12px;
   color: black;
+
+  .iconList {
+    list-style: none;
+    border-left: 1px solid #D0CFC4;
+    display: flex;
+    width: 90px;
+    flex-direction: row;
+    justify-content: flex-end;
+    padding-left: 3px;
+
+    .icon {
+      width: 22px;
+      height:22px;
+      padding: 3px;
+    }
+  }
 }
 
+.sides > .description{
+  display:flex;
+  justify-content: flex-end;
+}
 
 .reservations {
   padding-top: 20px;
@@ -263,6 +292,7 @@
     background-color: #C0D4C7;
   }
 }
+
 aside {
   margin-right: 100px;
   font-size: 12px;
@@ -271,7 +301,6 @@ aside {
   img {
     width: 210px;
     padding-top: 5px;
-
   }
 }
 
