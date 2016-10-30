@@ -10,5 +10,5 @@ The objective of this project was to create a clean one page restaurant website 
 * Pictures of our food (imgur API)
 * Ability to take reservations (`<form></form>` tag)
 
-Following is a link to restaurant website:
+Following is a link to the restaurant website:
 [IRON COOKS](http://tiy-gracelee-restaurant.surge.sh)
