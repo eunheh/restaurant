@@ -4,14 +4,16 @@
   padding: 10px;
   border: 1px solid #D0CFC4;
 }
+
 @mixin iconFix{
   width:20px;
   height:20px;
   display: flex;
   margin-left:5px;
   margin-right:5px;
-
+  padding-top: 2px;
 }
+
 *{
   box-sizing: border-box;
   background-color: #F6F5EF;
@@ -80,9 +82,11 @@
   }
   .title {
     color: black;
-    font-size: 12px;
+    font-size: 14px;
     padding-top: 4px;
-    padding-bottom: 4px;
+    padding-bottom: 3px;
+    display: flex;
+    justify-content: space-between;
   }
   .post {
     color: black;
@@ -94,6 +98,7 @@
     @include midBoxSize;
     overflow: hidden;
     font-size: 12px;
+    display: flex;
     .title {
       color: black;
       font-size: 12px;
@@ -103,6 +108,11 @@
     .post {
       color: black;
       font-size: 12px;
+      line-height: 15px;
+      overflow:scroll;
+      display: -webkit-box;
+      -webkit-line-clamp: 11;
+      -webkit-box-orient: vertical;
     }
   }
 
@@ -165,6 +175,10 @@
         padding-top: 20px;
         padding: 10px;
       }
+      .header:hover {
+        background-color: #C0D4C7;
+      }
+
     }
     #detailBox {
       padding-left: 223px;
@@ -176,30 +190,35 @@
       font-size: 14px;
       flex-direction: column-reverse;
     }
-
     .detailShow {
-      max-height: 1300px;
-      max-width: 600px;
-
+      max-height: 1500px;
+      max-width: 575px;
     }
 }
-.storyPic1 {
-  height: 200px;
-  width: 120px;
-  padding-top: 4px;
-  padding-bottom: 4px;
+
+.ourStory {
+  line-height: 20px;
+
+  .storyPic1 {
+    height: 210px;
+    width: 350px;
+    padding: 7px;
+    filter: grayscale(80%);
+    border: 1px solid #D0CFC4;
+  }
 }
-.storyPic2 {
-  height: 120px;
-  width: 200px;
-  padding-top: 4px;
-  padding-bottom: 4px;
+
+.menu {
+  font-size: 30px;
+  font-family: 'Roboto Condensed', sans-serif;
+  color: #79A489;
 }
 
 .menuType {
   font-size: 23px;
   margin-top: 10px;
   margin-bottom: 25px;
+  color: black;
 }
 .menuType:first-letter {
   text-transform: uppercase;
@@ -209,17 +228,53 @@
   font-size: 16px;
   display: flex;
   justify-content: space-between;
+  color: black;
+  padding-top: 10px;
 
   .price {
     font-size: 16px;
+    color: black;
   }
 }
 .description {
+  display: flex;
+  justify-content: space-between;
   padding-top: 12px;
-  padding-bottom: 5px;
+  padding-bottom: 16px;
   font-size: 12px;
+  color: black;
+
+  .iconList {
+    list-style: none;
+    border-left: 1px solid #D0CFC4;
+    display: flex;
+    width: 90px;
+    flex-direction: row;
+    justify-content: flex-end;
+    padding-left: 3px;
+
+    .icon {
+      width: 22px;
+      height:22px;
+      padding: 3px;
+    }
+  }
 }
 
+.sides > .description{
+  display:flex;
+  justify-content: flex-end;
+}
+
+.icon1 .icon2 .icon3 .icon4 {
+  display: none;
+}
+
+.disclosure1 .disclosure2 .disclosure3 .disclosure4 {
+  width: 200px;
+  height: 100px;
+  border: 1px solid #D0CFC4;
+}
 
 .reservations {
   padding-top: 20px;
@@ -228,16 +283,26 @@
   .formTitle {
     padding-top: 20px;
   }
+  input {
+    width: 300px;
+  }
+  textarea {
+    width: 300px;
+  }
+  select {
+    width: 300px;
+  }
 
   button {
     margin-top: 40px;
     height: 60px;
-    width: 200px;
+    width: 300px;
   }
   button:hover {
     background-color: #C0D4C7;
   }
 }
+
 aside {
   margin-right: 100px;
   font-size: 12px;
@@ -246,7 +311,6 @@ aside {
   img {
     width: 210px;
     padding-top: 5px;
-
   }
 }
 

@@ -5,12 +5,13 @@ import { getNewsData, getSpecialData, getMenuData, getPhotoData } from "./api";
 import { story } from "./story";
 import { renderRes } from "./form";
 import { showTab } from "./tabs";
+import { iconTemplate, menuIcon } from "./menuicon";
 
 function placeNews (data) {
   var newsHTML = `
     <div class="midHeader">Latest News
-      <div class="title">${data.title}         ${data.date_published}</div>
-      <div class="post">${data.post} Read more...</div>
+      <div class="title">${data.title}<span class="titlePrice">${data.date_published}</span></div>
+      <div class="post">${data.post}</div>
     </div>`;
 $(".news").html(newsHTML);
 };
@@ -28,7 +29,7 @@ function placeSpecial (data) {
     var specialHTML = `
       <div class="midHeader">Today's Special
         <img class="specialPic" src="./images/Seared_Scallops.jpg">
-        <div class="title">${special[0].item} . . . . . . . . . . . . . . .  ${special[0].price}</div>
+        <div class="title">${special[0].item} . . . . . . . . . . . . . . . ${special[0].price}</div>
         <div class="post">${special[0].description}</div>
       </div>`;
   $(".special").html(specialHTML);
@@ -48,25 +49,30 @@ getMenuData().then(function (results) {
     <div class="${parameters[i]}">
       <div class="item">${appItem.item}
       <span class="price">${appItem.price}</span></div>
-      <div class="description">${appItem.description}</div>
+      <div class="description">${appItem.description}<span class="icons">${iconTemplate}</span></div>
     </div>`;
   });
+
+  var newApp = app.join("");
   var appHTML = `<div class="menuType">${parameters[i]}
-  <div class="${parameters[i]}"></div>` + app + "</div>";
+  <div class="${parameters[i]}"></div>` + newApp + "</div>";
 
   $(".menu").append(appHTML);
 }
 });
 
+$(".icon").hover(menuIcon);
+
 $(".reservations").append(renderRes);
 
-function placePhoto (photoData) {
-    var photo = photoData.data.images;
-    var link = photo.map(function (obj) {
+getPhotoData().then(function (photoData) {
+  var photo = photoData.data.images;
+  var link = photo.map(function (object) {
       return `
-      <img src="${obj.link}">
-      `;
-  })
+      <img src="${object.link}">
+      `});
+      console.log(link);
+
   $(".foodPhoto").append(link);
-};
-getPhotoData().then(placePhoto);
+
+});

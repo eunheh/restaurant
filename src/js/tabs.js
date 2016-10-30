@@ -4,7 +4,7 @@ import _ from 'lodash';
 
 function showTab (event) {
   var target = $(event.target);
-  console.log(target[0].id);
+  // console.log(target[0].id);
     if (target[0].id == "header1") {
       $(".detail1").addClass("detailShow");
       $(".detail2").removeClass("detailShow");
