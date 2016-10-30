@@ -5,7 +5,7 @@ import { getNewsData, getSpecialData, getMenuData, getPhotoData } from "./api";
 import { story } from "./story";
 import { renderRes } from "./form";
 import { showTab } from "./tabs";
-import { iconTemplate } from "./menuicon";
+import { iconTemplate, menuIcon } from "./menuicon";
 
 function placeNews (data) {
   var newsHTML = `
@@ -60,6 +60,8 @@ getMenuData().then(function (results) {
   $(".menu").append(appHTML);
 }
 });
+
+$(".icon").click(menuIcon);
 
 $(".reservations").append(renderRes);
 
