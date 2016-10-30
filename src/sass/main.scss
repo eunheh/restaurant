@@ -4,14 +4,16 @@
   padding: 10px;
   border: 1px solid #D0CFC4;
 }
+
 @mixin iconFix{
   width:20px;
   height:20px;
   display: flex;
   margin-left:5px;
   margin-right:5px;
-
+  padding-top: 2px;
 }
+
 *{
   box-sizing: border-box;
   background-color: #F6F5EF;
@@ -80,9 +82,11 @@
   }
   .title {
     color: black;
-    font-size: 12px;
+    font-size: 14px;
     padding-top: 4px;
-    padding-bottom: 4px;
+    padding-bottom: 3px;
+    display: flex;
+    justify-content: space-between;
   }
   .post {
     color: black;
@@ -165,6 +169,10 @@
         padding-top: 20px;
         padding: 10px;
       }
+      .header:hover {
+        background-color: #C0D4C7;
+      }
+
     }
     #detailBox {
       padding-left: 223px;
@@ -176,30 +184,35 @@
       font-size: 14px;
       flex-direction: column-reverse;
     }
-
     .detailShow {
       max-height: 1300px;
-      max-width: 600px;
-
+      max-width: 575px;
     }
 }
-.storyPic1 {
-  height: 200px;
-  width: 120px;
-  padding-top: 4px;
-  padding-bottom: 4px;
+
+.ourStory {
+  line-height: 20px;
+
+  .storyPic1 {
+    height: 210px;
+    width: 350px;
+    padding: 7px;
+    filter: grayscale(80%);
+    border: 1px solid #D0CFC4;
+  }
 }
-.storyPic2 {
-  height: 120px;
-  width: 200px;
-  padding-top: 4px;
-  padding-bottom: 4px;
+
+.menu {
+  font-size: 30px;
+  font-family: 'Roboto Condensed', sans-serif;
+  color: #79A489;
 }
 
 .menuType {
   font-size: 23px;
   margin-top: 10px;
   margin-bottom: 25px;
+  color: black;
 }
 .menuType:first-letter {
   text-transform: uppercase;
@@ -209,15 +222,18 @@
   font-size: 16px;
   display: flex;
   justify-content: space-between;
+  color: black;
 
   .price {
     font-size: 16px;
+    color: black;
   }
 }
 .description {
   padding-top: 12px;
   padding-bottom: 5px;
   font-size: 12px;
+  color: black;
 }
 
 
@@ -228,11 +244,20 @@
   .formTitle {
     padding-top: 20px;
   }
+  input {
+    width: 300px;
+  }
+  textarea {
+    width: 300px;
+  }
+  select {
+    width: 300px;
+  }
 
   button {
     margin-top: 40px;
     height: 60px;
-    width: 200px;
+    width: 300px;
   }
   button:hover {
     background-color: #C0D4C7;

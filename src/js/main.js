@@ -9,7 +9,7 @@ import { showTab } from "./tabs";
 function placeNews (data) {
   var newsHTML = `
     <div class="midHeader">Latest News
-      <div class="title">${data.title}         ${data.date_published}</div>
+      <div class="title">${data.title}<span class="titlePrice">${data.date_published}</span></div>
       <div class="post">${data.post} Read more...</div>
     </div>`;
 $(".news").html(newsHTML);
@@ -28,7 +28,7 @@ function placeSpecial (data) {
     var specialHTML = `
       <div class="midHeader">Today's Special
         <img class="specialPic" src="./images/Seared_Scallops.jpg">
-        <div class="title">${special[0].item} . . . . . . . . . . . . . . .  ${special[0].price}</div>
+        <div class="title">${special[0].item} . . . . . . . . . . . . . . . ${special[0].price}</div>
         <div class="post">${special[0].description}</div>
       </div>`;
   $(".special").html(specialHTML);
@@ -60,13 +60,14 @@ getMenuData().then(function (results) {
 
 $(".reservations").append(renderRes);
 
-function placePhoto (photoData) {
-    var photo = photoData.data.images;
-    var link = photo.map(function (obj) {
+getPhotoData().then(function (photoData) {
+  var photo = photoData.data.images;
+  var link = photo.map(function (object) {
       return `
-      <img src="${obj.link}">
-      `;
-  })
+      <img src="${object.link}">
+      `});
+      console.log(link);
+
   $(".foodPhoto").append(link);
-};
-getPhotoData().then(placePhoto);
+
+});
