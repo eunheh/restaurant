@@ -61,7 +61,7 @@ getMenuData().then(function (results) {
 }
 });
 
-$(".icon").click(menuIcon);
+$(".icon").hover(menuIcon);
 
 $(".reservations").append(renderRes);
 
