@@ -259,8 +259,17 @@
       width: 22px;
       height:22px;
       padding: 3px;
+      opacity: 0.3;
+
+    }
+    .icon1, .icon2, .icon3, .icon4 {
+      opacity: 1.0;
     }
   }
+  .disclosure1, .disclosure2, .disclosure3, .disclosure4 {
+    display: none;
+  }
+
 }
 
 .sides > .description{
@@ -268,14 +277,13 @@
   justify-content: flex-end;
 }
 
-.icon1 .icon2 .icon3 .icon4 {
-  display: none;
-}
-
-.disclosure1 .disclosure2 .disclosure3 .disclosure4 {
+.icon1:hover .disclosure1, .icon2:hover .disclosure2, .icon3:hover .disclosure3, .icon4:hover .disclosure4{
+  display: block;
+  position: absolute;
   width: 200px;
-  height: 100px;
+  height: 61px;
   border: 1px solid #D0CFC4;
+  background-color: #C0D4C7;
 }
 
 .reservations {
