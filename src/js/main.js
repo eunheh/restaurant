@@ -5,8 +5,9 @@ import { getNewsData, getSpecialData, getMenuData, getPhotoData } from "./api";
 import { story } from "./story";
 import { renderRes } from "./form";
 import { showTab } from "./tabs";
-import { iconTemplate, menuIcon } from "./menuicon";
+import { iconTemplate, getIconInfo } from "./menuicon";
 
+//obtain news from news API
 function placeNews (data) {
   var newsHTML = `
     <div class="midHeader">Latest News
@@ -17,6 +18,7 @@ $(".news").html(newsHTML);
 };
 getNewsData().then(placeNews)
 
+//obtain special of the day from special API
 function placeSpecial (data) {
     var specialItem = `${data.menu_item_id}`;
     // console.log(specialItem);
@@ -37,9 +39,13 @@ function placeSpecial (data) {
 };
 getSpecialData().then(placeSpecial);
 
+//place tab header click event on tabs.js onto the page
 $(".header").click(showTab);
+
+//place story items from story.js onto the page
 $(".ourStory").html(story);
 
+//place menu API tab items onto the page
 getMenuData().then(function (results) {
   var parameters = Object.keys(results);
   // console.log(parameters);
@@ -61,18 +67,16 @@ getMenuData().then(function (results) {
 }
 });
 
-$(".icon").hover(menuIcon);
-
+//place form input items from forms.js onto the page
 $(".reservations").append(renderRes);
 
+//place photo on to the page
 getPhotoData().then(function (photoData) {
   var photo = photoData.data.images;
-  var link = photo.map(function (object) {
+  var pics6 = photo.splice(0,6);
+  var link = pics6.map(function (object) {
       return `
       <img src="${object.link}">
       `});
-      console.log(link);
-
   $(".foodPhoto").append(link);
-
 });
